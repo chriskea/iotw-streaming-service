@@ -1,0 +1,14 @@
+services:
+   db:
+      image: postgres:alpine
+      ports:
+         - 5432:4269
+      environment:
+         - POSTGRES_PASSWORD=S3cret
+         - POSTGRES_USER=str34ming
+         - POSTGRES_DB=streaming
+      volumes:
+         - pgdata:/var/lib/postgresql/data
+
+volumes:
+   pgdata:
