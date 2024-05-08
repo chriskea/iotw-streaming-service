@@ -1,0 +1,21 @@
+spring:
+   application:
+      name: streaming-service
+   datasource:
+      driver-class-name: org.postgresql.Driver
+      username: postgres
+      password: streaming
+      url: jdbc:postgresql://localhost:5435/streaming-service-db
+      name: streaming-service
+
+   jpa:
+      database: postgresql
+      show-sql: true
+      hibernate:
+         ddl-auto: update
+      properties:
+         hibernate:
+            format_sql: true
+server:
+   port: 8083
+

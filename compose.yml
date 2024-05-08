@@ -1,12 +1,11 @@
 services:
-   postgresdb:
+   db:
       image: postgres:alpine
-      container_name: streaming-service
       restart: unless-stopped
-
+      container_name: streaming-service
       environment:
-         - POSTGRES_USER=dev
-         - POSTGRES_PASSWORD=iotw
-         - POSTGRES_DB=streaming_db
+         - POSTGRES_USER=postgres
+         - POSTGRES_PASSWORD=streaming
+         - POSTGRES_DB=streaming-service
       ports:
-         - 5432:4269
+         - 5435:5432
